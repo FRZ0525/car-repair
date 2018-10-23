@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+<script src="js/jquery.js"></script>
+<script src="js/pintuer.js"></script>
+<script src="js/cookie_util.js"></script>
+<script src="js/echarts.common.min.js"></script>
+<script type="text/javascript">
+    	var user_id=getCookie("userId");
+		console.log(user_id);
+    	if(user_id!=null){//用户ID存在    		
+    		$(function (){
+    			$.ajax({
+					url:"http://localhost:8080/car-repair/orderinfo/month_income.do",
+					type:"post",
+					data:{},
+					dataType:"json",
+					success:function(rs){
+						var months=[];
+						var total_income=[];
+						if(rs.status==0){
+							var vis=rs.data;
+							 $.each(rs.data,function(key,values){    
+								  
+				                    months.push(values.months);  
+				                    total_income.push(values.total_income);  
+				                      
+				                 });  
+							console.log(vis.toString());					
+							
+							myChart.setOption({
+								xAxis:{
+									data:months
+								},
+								series:{
+									data:total_income
+								}
+							});
+						}else{
+							alert("统计信息加载失败");
+						}
+					},
+					error:function(){
+						alert("发生异常，请稍后再试");
+					}
+				})		
+				
+			})	
+				
+		}else{//用户ID不存在
+			top.location.href="http://localhost:8080/car-repair/login.html"
+		}
+    	
+    </script>
+</head>
+<body>
+	<form method="post" action="" id="listform">
+		<div class="panel admin-panel">
+			<div class="panel-head">
+				<strong class="icon-reorder">月收入统计</strong> <a href=""
+					style="float: right; display: none;">添加字段</a>
+			</div>
+			<div class="total">
+				<div id="myChart" style="width: 1250px; height: 725px;"></div>
+			</div>
+
+			<script>
+
+var myChart = echarts.init(document.getElementById('myChart'));
+option = {
+	    color: ['#3398DB'],
+	    tooltip : {
+	        trigger: 'axis',
+	        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+	            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+	        },
+	        showContent:true, 
+	        formatter: function (params) {
+	    		var res = '<div><p>' + params[0].name;
+	    		for (var i = 0, l = params.length; i < l; i++) {
+	        		res +=  ' : ' + params[i].value+'元</p></div>';
+	    			}
+	    		return res;
+				}
+	    },
+	    toolbox: {
+	        show : true,
+	        feature : {
+	            dataView : {show: true, readOnly: false},
+	            magicType : {show: true, type: ['line', 'bar']},
+	            restore : {show: true},
+	            saveAsImage : {show: true}
+	        }
+	    },
+	    grid: {
+	        left: '3%',
+	        right: '4%',
+	        bottom: '3%',
+	        containLabel: true
+	    },
+	    toolbox: {
+	        show : true,
+	        feature : {
+	            /* dataView : {show: true, readOnly: false}, */
+	            magicType : {show: true, type: ['line', 'bar']},
+	            restore : {show: true},
+	            saveAsImage : {show: true}
+	        }
+	    },
+	    calculable : true,
+	    xAxis : [
+	        {
+	        	
+	        	show : true,
+	            type : 'category',
+	            name : '时间',
+	            data : [],	            
+	            axisTick: {
+	                alignWithLabel: true
+	            }
+	        }
+	    ],
+	    yAxis : [
+	        {	        	
+	        	show : true,
+	        	name : '月收入',
+	            type : 'value'
+	            
+	        }
+	    ],
+	    series : [
+	        {
+	            
+	            type:'bar',
+	            barWidth: '60%',
+	            data:[]
+	        }
+	    ]
+	};
+if (option && typeof option === "object") {  
+    myChart.setOption(option, true);  
+}
+</script>
+		</div>
+	</form>
+
+
+
+
+</body>
+
+
+</html>

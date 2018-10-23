@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+<script src="js/jquery.js"></script>
+<script src="js/pintuer.js"></script>
+<script src="js/cookie_util.js"></script>
+<script src="js/echarts.common.min.js"></script>
+<script type="text/javascript">
+    	var user_id=getCookie("userId");
+		console.log(user_id);
+    	if(user_id!=null){//用户ID存在    		
+    		$(function (){
+    			$.ajax({
+					url:"http://localhost:8080/car-repair/orderinfo/total_project.do",
+					type:"post",
+					data:{},
+					dataType:"json",
+					success:function(rs){
+						var remark=[];
+						var total_time=[];
+						if(rs.status==0){
+							var vis=rs.data;
+							 $.each(rs.data,function(key,values){    
+								  
+				                    remark.push(values.remark);  
+				                    total_time.push(values.total_time);  
+				                      
+				                 });  
+							console.log(remark.toString());
+							//console.log(trouble_price.toString());
+							//alert("后端数据已载入");
+							
+							myChart.setOption({
+								xAxis:{            //x轴数据
+									data:remark
+								},
+								series:{          //数据列
+									data:total_time
+								}
+							});
+						}else{
+							alert("统计信息加载失败");
+						}
+					},
+					error:function(){
+						alert("发生异常，请稍后再试");
+					}
+				})		
+				
+			})	
+				
+		}else{//用户ID不存在
+			top.location.href="http://localhost:8080/car-repair/login.html"
+		}
+    	
+    </script>
+</head>
+<body>
+	<form method="post" action="" id="listform">
+		<div class="panel admin-panel">
+			<div class="panel-head">
+				<strong class="icon-reorder">最近项目使用统计</strong> <a href=""
+					style="float: right; display: none;">添加字段</a>
+			</div>
+			<div class="total">
+				<div id="myChart" style="width: 1250px; height: 725px;"></div>
+			</div>
+
+			<script>
+
+var myChart = echarts.init(document.getElementById('myChart'));
+option = {
+	    color: ['#3398DB'],
+	    tooltip : {
+	        trigger: 'axis',
+	        showContent:true, 
+	        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+	            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+	        },
+	        formatter: function (params) {
+	    		var res = '<div><p>' + params[0].name;
+	    		for (var i = 0, l = params.length; i < l; i++) {
+	        		res +=  ' : ' + params[i].value+'</p></div>';
+	    			}
+	    		return res;
+				}
+	    },
+	    grid: {
+	        left: '3%',
+	        right: '4%',
+	        bottom: '3%',
+	        containLabel: true
+	    },
+	    toolbox: {
+	        show : true,
+	        feature : {
+	            magicType : {show: true, type: ['line', 'bar']},    //true为允许显示的图形方式，line为折线图，bar为柱形图
+	            restore : {show: true},                   //restore表示刷新统计图并且还原为默认的显示，true为开启该功能
+	            saveAsImage : {show: true}               //saveAsImage表示保存当前显示的统计图到本地，true为开启该功能
+	        }
+	    },
+	    calculable : true,
+	    xAxis : [
+	        {
+	        	name : '项目名称',
+	        	show : true,
+	            type : 'category',
+	            data : [],
+	            axisTick: {
+	                alignWithLabel: true
+	            }
+	        }
+	    ],
+	    yAxis : [
+	        {
+	        	show : true,
+	        	name : '次数',
+	            type : 'value'
+	        }
+	    ],
+	    series : [
+	        {
+	            
+	            type:'bar',
+	            barWidth: '60%',
+	            data:[]
+	        }
+	    ]
+	};
+if (option && typeof option === "object") {  
+    myChart.setOption(option, true);  
+}
+</script>
+		</div>
+	</form>
+
+
+
+
+</body>
+
+
+</html>

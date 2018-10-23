@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+<script src="js/jquery.js"></script>
+<script src="js/pintuer.js"></script>
+<script src="js/cookie_util.js"></script>
+<script type="text/javascript">
+    	var user_id=getCookie("userId");
+		console.log(user_id);
+    	if(user_id!=null){//用户ID存在
+				function add(){
+					var trouble_code=$("#trouble_code").val();
+					var trouble_name=$("#trouble_name").val();
+					var trouble_remark=$("#trouble_remark").val();
+					var trouble_price=$("#trouble_price").val();
+					$.ajax({
+						url:"http://localhost:8080/car-repair/troubleinfo/add.do",
+						type:"post",
+						data:{"trouble_code":trouble_code,
+							"trouble_name":trouble_name,
+							"trouble_remark":trouble_remark,
+							"trouble_price":trouble_price},
+						dataType:"json",
+						success:function(rs){
+							console.log("项目信息添加");
+							alert(rs.msg);
+							window.location.href="list.html";
+						},
+						error:function(){
+							alert("项目信息添加成功");
+						}
+					})
+			};
+		}else{//用户ID不存在
+			top.location.href="login.html";
+		}
+    </script>
+</head>
+<body>
+	<div class="panel admin-panel">
+		<div class="panel-head" id="add">
+			<strong><span class="icon-pencil-square-o"></span>项目信息</strong>
+		</div>
+		<div class="body-content">
+			<form method="post" class="form-x" action="">
+				<div class="form-group">
+					<div class="label">
+						<label>项目序号：</label>
+					</div>
+					<div class="field">
+						<input type="text" class="input w50" value="" id="trouble_code" />
+						<div class="tips"></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="label">
+						<label>项目名称：</label>
+					</div>
+					<div class="field">
+						<input type="text" class="input w50" value="" id="trouble_name" />
+						<div class="tips"></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="label">
+						<label>项目类型：</label>
+					</div>
+					<div class="field">
+						<input type="text" class="input w50" value="" id="trouble_remark" />
+						<div class="tips"></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="label">
+						<label>价格：</label>
+					</div>
+					<div class="field">
+						<input type="text" class="input w50" value="" id="trouble_price" />
+						<div class="tips"></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="label">
+						<label></label>
+					</div>
+					<div class="field">
+						<button onclick="add()" class="button bg-main icon-check-square-o"
+							type="submit">提交</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+<script src="js/jquery.js"></script>
+<script src="js/pintuer.js"></script>
+<script type="text/javascript">
+  
+$(function (){
+	$.ajax({
+		url:"http://localhost:8080/car-repair/troubleinfo/show.do",
+		type:"post",
+		data:{},
+		dataType:"json",
+		success:function(rs){
+			if(rs.status==0){
+				var troubles=rs.data;
+				createTroubleTr(troubles);
+				createSelection(troubles)
+			}else{
+				alert("用户查看项目信息加载失败");
+			}
+		},
+		error:function(){
+			alert("用户查看项目信息加载发生异常，请稍后再试");
+		}
+	})
+	
+})	
+			
+		     	var flag=0;
+				function priceSort(){
+					var button_value=document.getElementById("button_price").value;
+	   				if(button_value=="按价格排序"){
+		   				button_value="按价格升序排序";
+	       				flag=1;
+	   				}
+	   				else if(button_value=="按价格升序排序"){
+		   				button_value="按价格降序排序";
+	       				flag=2;
+	   				}
+	   				else if(button_value=="按价格降序排序"){
+		   				button_value="按价格升序排序";
+	       				flag=1;
+	   				}
+	   				document.getElementById("button_price").value=button_value;
+					$.ajax({
+	    				url:"http://localhost:8080/car-repair/troubleinfo/pricesort.do",
+	    				type:"post",
+	    				data:{"flag":flag},
+	    				dataType:"json",
+	    				success:function(rs){
+	    					if(rs.status==0){
+	    						console.log("搜索成功");
+	    						$("#troublelist").html("");
+	    						var troubles=rs.data;
+	    						createTroubleTr(troubles);
+	    					}else{
+	    						alert(rs.msg);
+	    					}
+	    				},
+	    				error:function(){
+	    					alert("发生异常，请稍后再试");
+	    				}
+	    			})	
+				}
+				function search(){
+	    			var keywords=$("#keywords").val();
+	    			var type=$("#type").val();
+	    			$.ajax({
+	    				url:"http://localhost:8080/car-repair/troubleinfo/searchtrouble.do",
+	    				type:"post",
+	    				data:{"type":type,"keywords":keywords},
+	    				dataType:"json",
+	    				success:function(rs){
+	    					if(rs.status==0){
+	    						console.log("搜索成功");
+	    						$("#troublelist").html("");
+								var troubles=rs.data;
+								createTroubleTr(troubles);							
+	    					}else{
+	    						alert(rs.msg);
+	    					}
+	    				},
+	    				error:function(){
+	    					alert("发生异常，请稍后再试");
+	    				}
+	    			})		
+	    		}			
+				
+			function createTroubleTr(troubles){
+				for(var i=0;i<troubles.length;i++){
+					var id=troubles[i].id;
+					var trouble_code=troubles[i].trouble_code;
+					var trouble_name=troubles[i].trouble_name;
+					var trouble_remark=troubles[i].trouble_remark;
+					var trouble_price=troubles[i].trouble_price;
+					var trs='<tr>';
+					if(status==0){
+			
+						trs+='<td style="text-align:left; padding-left:20px;">'+trouble_code+'</td>';
+						trs+='<td>'+trouble_name+'</td>';
+						trs+='<td>'+trouble_remark+'</td>';
+						trs+='<td>'+trouble_price+'</td>';
+						
+					}
+					trs+='</tr>';				
+				var $trs=$(trs);
+				$("#troublelist").append($trs);
+				console.log($trs.data("id"));
+				}
+ 			}
+			
+			 function createSelection(troubles){    //创建下拉菜单
+	 		 	 var remark_option=[];
+	 		 	remark_option.push("-请选择分类-");
+	 		 	 for(var i=0;i<troubles.length;i++){
+	 		 		for(var j=i+1;j<troubles.length;j++){
+	 		 			if(troubles[i].trouble_remark==troubles[j].trouble_remark){
+	 		 				j=++i;
+	 		 			}
+	 		 		}
+	 		 		remark_option.push(troubles[i].trouble_remark);
+	 		 	 }		 	 	 			
+	 		 	 var option=$("#type_remark");
+	 		 	 option.empty();
+	 		 	 for(var i=0;i<remark_option.length;i++){
+	 		 		 var option_value=$("<option>").text(remark_option[i]).val(i);
+	 		 		 option.append(option_value);
+	 		 	 }
+	 		 
+	 		 }
+			 
+			function select_change(){   //下拉选择类型排序
+				var remark=$("#type_remark option:selected").text();
+				$.ajax({
+					url:"http://localhost:8080/car-repair/troubleinfo/searchtroubleByRemark.do",
+					type:"post",
+					data:{"remark":remark},
+					dataType:"json",
+					success:function(rs){
+						if(rs.status==0){
+							console.log("搜索成功");
+							$("#troublelist").html("");
+							var troubles=rs.data;
+							createTroubleTr(troubles);							
+						}else{
+							alert(rs.msg);
+						}
+					},
+					error:function(){
+						alert("发生异常，请稍后再试");
+					}
+				})
+			}; 
+
+</script>
+</head>
+<body>
+	<form method="post" action="" id="listform">
+		<div class="panel admin-panel">
+			<div class="panel-head">
+				<strong class="icon-reorder"> 项目信息</strong> <a href=""
+					style="float: right; display: none;">添加字段</a>
+			</div>
+			<div class="padding border-bottom">
+				<ul class="search" style="padding-left: 10px;">
+
+					<if condition="$iscid eq 1">
+					<li><select id="type" name="cid" class="input"
+						style="width: 110px; line-height: 17px;">
+							<option value="">-请选择分类-</option>
+							<option value="1">项目序号</option>
+							<option value="2">项目名称</option>
+							<option value="3">项目类型</option>
+					</select></li>
+					</if>
+					<li><input type="text" placeholder="请输入搜索关键字" id="keywords"
+						class="input"
+						style="width: 250px; line-height: 17px; display: inline-block" />
+						<input type="button" class="button border-main icon-search"
+						onclick="search()" value="搜索"></input></li>
+
+					<if condition="$iscid eq 1">
+					<li><select id="type_remark" name="cid" class="input"
+						style="width: 110px; line-height: 17px;"
+						onchange="select_change()">
+							<!-- <option value="">-请选择分类-</option> -->
+					</select></li>
+					</if>
+
+					<li><input id="button_price" type="button"
+						class="button border-main" onclick="priceSort()" value="按价格排序"></input></li>
+				</ul>
+			</div>
+
+			<table class="table table-hover text-center">
+				<tr>
+					<th width="100" style="text-align: left; padding-left: 20px;">项目序号</th>
+					<th>项目名称</th>
+					<th>项目类型</th>
+					<th>价格</th>
+					<!-- <th width="250">操作</th> -->
+				</tr>
+
+				<tbody id="troublelist">
+
+				</tbody>
+
+			</table>
+		</div>
+	</form>
+
+
+
+
+</body>
+</html>
