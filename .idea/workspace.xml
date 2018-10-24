@@ -6,8 +6,118 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecac7036-0938-4706-99fe-589f06813e30" name="Default Changelist" comment="" />
+    <list default="true" id="ecac7036-0938-4706-99fe-589f06813e30" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/controller/CarInfoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/controller/OrderInfoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/controller/PartsInfoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/controller/PersonalInfoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/controller/TroubleInfoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/controller/VisitorController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/dao/CarInfoDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/dao/OrderInfoDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/dao/PartsInfoDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/dao/PersonalInfoDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/dao/TroubleInfoDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/dao/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/dao/VisitorDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/entity/CarInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/entity/OrderInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/entity/PartsInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/entity/PersonalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/entity/TroubleInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/entity/Visitor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/service/CarInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/service/CarInfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/service/OrderInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/service/OrderInfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/service/PartsInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/service/PartsInfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/service/PersonalInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/service/PersonalInfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/service/TroubleInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/service/TroubleInfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/service/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/service/VisitorService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/service/VisitorServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/util/IDUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/util/MD5Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/util/Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/mapper/CarInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/mapper/OrderInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/mapper/PartsInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/mapper/PersonalInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/mapper/TroubleInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/mapper/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/mapper/VisitorMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/spring-mvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/spring-mybatis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/car-repair.iml" beforeDir="false" afterPath="$PROJECT_DIR$/car-repair.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/car_repair_war_exploded/WEB-INF/classes/com/dao/CarInfoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/car_repair_war_exploded/WEB-INF/classes/com/dao/CarInfoDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/car_repair_war_exploded/WEB-INF/classes/com/dao/OrderInfoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/car_repair_war_exploded/WEB-INF/classes/com/dao/OrderInfoDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/car_repair_war_exploded/WEB-INF/classes/com/dao/PartsInfoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/car_repair_war_exploded/WEB-INF/classes/com/dao/PartsInfoDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/car_repair_war_exploded/WEB-INF/classes/com/dao/PersonalInfoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/car_repair_war_exploded/WEB-INF/classes/com/dao/PersonalInfoDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/car_repair_war_exploded/WEB-INF/classes/com/dao/TroubleInfoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/car_repair_war_exploded/WEB-INF/classes/com/dao/TroubleInfoDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/car_repair_war_exploded/WEB-INF/classes/com/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/car_repair_war_exploded/WEB-INF/classes/com/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/car_repair_war_exploded/WEB-INF/classes/com/dao/VisitorDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/car_repair_war_exploded/WEB-INF/classes/com/dao/VisitorDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/car_repair_war_exploded/WEB-INF/classes/spring-mvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/car_repair_war_exploded/WEB-INF/classes/spring-mybatis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/controller/CarInfoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/controller/OrderInfoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/controller/PartsInfoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/controller/PersonalInfoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/controller/TroubleInfoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/controller/VisitorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dao/CarInfoDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dao/OrderInfoDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dao/PartsInfoDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dao/PersonalInfoDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dao/TroubleInfoDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dao/UserDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dao/VisitorDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/entity/CarInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/entity/OrderInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/entity/PartsInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/entity/PersonalInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/entity/TroubleInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/entity/Visitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/service/CarInfoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/service/CarInfoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/service/OrderInfoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/service/OrderInfoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/service/PartsInfoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/service/PartsInfoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/service/PersonalInfoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/service/PersonalInfoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/service/TroubleInfoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/service/TroubleInfoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/service/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/service/VisitorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/service/VisitorServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/util/IDUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/util/MD5Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/util/Result.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapper/CarInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapper/OrderInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapper/PartsInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapper/PersonalInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapper/TroubleInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapper/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapper/VisitorMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spring-mvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spring-mybatis.xml" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,27 +128,88 @@
     <session id="748390589">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="java" value="3" />
+          <entry key="xml" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="3" />
+          <entry key="XML" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.spring.core.usages.trigger">
+        <counts>
+          <entry key="fixes.SpringFacetInspection.AddFacetFix" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="xml" value="30" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="XML" value="30" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/spring-mvc.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/spring-mybatis.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="46" lean-forward="true" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/spring-mvc.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/spring-mybatis.xml" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -53,9 +224,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1006" />
-    <option name="y" value="50" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="321" />
+    <option name="y" value="28" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -65,7 +236,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -74,23 +244,60 @@
               <item name="car-repair" type="b2602c69:ProjectViewProjectNode" />
               <item name="car-repair" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="car-repair" type="b2602c69:ProjectViewProjectNode" />
+              <item name="car-repair" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="car-repair" type="b2602c69:ProjectViewProjectNode" />
+              <item name="car-repair" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="car-repair" type="b2602c69:ProjectViewProjectNode" />
+              <item name="car-repair" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="car-repair" type="b2602c69:ProjectViewProjectNode" />
+              <item name="car-repair" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="car-repair" type="b2602c69:ProjectViewProjectNode" />
+              <item name="car-repair" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="car-repair" type="b2602c69:ProjectViewProjectNode" />
+              <item name="car-repair" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540307785054" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540396321580" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -215,47 +422,48 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540306512966</updated>
-      <workItem from="1540306518829" duration="1391000" />
+      <workItem from="1540306518829" duration="1994000" />
+      <workItem from="1540393299703" duration="3004000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1391000" />
+    <option name="totallyTimeSpent" value="4998000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1006" y="50" width="1400" height="1000" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info id="Web" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18123667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Application Servers" weight="0.3298731" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" weight="0.3298731" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33025405" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.46746203" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3298731" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.329718" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,17 +473,41 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/controller/CarInfoController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/controller/CarInfoController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/service/OrderInfoServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/service/OrderInfoServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring-mybatis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="46" lean-forward="true" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -298,7 +530,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web</last-edited>
+          <last-edited>Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
